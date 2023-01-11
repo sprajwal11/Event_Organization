@@ -16,7 +16,7 @@ contract Event_Organization{
     mapping(address=>mapping(uint=>uint)) public tickets;
     uint public nextId;
     
-    function createEvent (string memory name, uint date, uint price, uint,uint ticketCount) external {
+    function createEvent (string memory name, uint date, uint price,uint ticketCount) external {
         require(date>block.timestamp, "You can organize the event for the future date only");
         require(ticketCount>0,"Ticket size can't be zero");
 
